@@ -1,7 +1,7 @@
 from django import forms
 
 
-class HouseLoan(forms.Form):
+class HouseLoanForm(forms.Form):
     name = forms.CharField()
     yearlySalary = forms.DecimalField()
     yearsLoan = forms.IntegerField()

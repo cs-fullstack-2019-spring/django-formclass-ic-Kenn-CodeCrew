@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .forms import HouseLoan
+from .forms import HouseLoanForm
 
 
 # Create your views here.
@@ -8,7 +8,7 @@ def index(request):
     return HttpResponse("Working on more forms")
 
 def loanForm(request):
-    newForm = HouseLoan()
+    newForm = HouseLoanForm()
 
     context = {
         "newForm": newForm
@@ -18,4 +18,6 @@ def loanForm(request):
 
 
 def gotHouseInfo(request):
+    print(request.POST)
+    print(request.POST["name"])
     return HttpResponse("Got House Info")
