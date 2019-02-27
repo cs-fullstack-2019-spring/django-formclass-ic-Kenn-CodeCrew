@@ -21,3 +21,11 @@ def gotHouseInfo(request):
     print(request.POST)
     print(request.POST["name"])
     return HttpResponse("Got House Info")
+
+
+def loan(request):
+    newForm = HouseLoanForm()
+    context = {
+        "newForm": newForm,
+    }
+    return render(request, "DogHouseApp/loan.html", context)
