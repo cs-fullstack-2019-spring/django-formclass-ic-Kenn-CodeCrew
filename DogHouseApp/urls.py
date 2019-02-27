@@ -7,4 +7,6 @@ urlpatterns = [
     path('oldForm/', views.loanForm, name="loanForm"),
     path('gotHouseInfo/', views.gotHouseInfo, name="gotHouseInfo"),
     path('newForm/', views.loan, name="loan"),
+    path('dog/', views.dog, name="dog"),
+    path('dogResults/', views.dogResults, name="dogResults"),
 ]
