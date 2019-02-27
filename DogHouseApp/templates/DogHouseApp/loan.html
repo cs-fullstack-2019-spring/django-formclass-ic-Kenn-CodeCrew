@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form action="{% url 'gotHouseInfo' %}" method="post">
+<form action="{% url 'loan' %}" method="post">
     {% csrf_token %}
     {{ newForm }}
     <button>Submit</button>

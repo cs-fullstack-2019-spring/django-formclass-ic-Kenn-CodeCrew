@@ -24,6 +24,10 @@ def gotHouseInfo(request):
 
 
 def loan(request):
+
+    if(request.method == 'POST'):
+        print(request.POST)
+
     newForm = HouseLoanForm()
     context = {
         "newForm": newForm,
