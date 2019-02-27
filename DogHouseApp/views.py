@@ -29,9 +29,9 @@ def loan(request):
         print(request.POST)
         context = {"name": request.POST["name"]}
         return render(request, "DogHouseApp/loanResults.html", context)
-
-    newForm = HouseLoanForm()
-    context = {
-        "newForm": newForm,
-    }
-    return render(request, "DogHouseApp/loan.html", context)
+    else:
+        newForm = HouseLoanForm()
+        context = {
+            "newForm": newForm,
+        }
+        return render(request, "DogHouseApp/loan.html", context)
